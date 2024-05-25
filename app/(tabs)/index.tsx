@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , Pressable} from 'react-native';
+import { StyleSheet, Text, View , Pressable, Image} from 'react-native';
 import {Link, Stack, useNavigation} from 'expo-router';
 import { useEffect } from 'react';
 
@@ -20,8 +20,9 @@ const styles = StyleSheet.create({
 
   },
   image: {
-    width: 50,
-    height: 50,
+    width: 100,
+    height: 100,
+    margin: 'auto',
   },
 
 
@@ -38,6 +39,7 @@ export default function HomeScreen() {
   
   return (
     <div style={styles.titleContainer}>
+      <Image style={styles.image} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
       <Text >Home page</Text>
       <View style={{
         flex:1,
