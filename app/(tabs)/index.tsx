@@ -26,6 +26,8 @@ export default function HomeScreen() {
 
         <Link push href='/login'>Login</Link>
 
+        <Link replace href='/forum'>Forum</Link>
+
 
 
       </View>
