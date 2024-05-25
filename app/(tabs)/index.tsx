@@ -24,6 +24,10 @@ export default function HomeScreen() {
             </Pressable>
         </Link>
 
+        <Link push href='/login'>Login</Link>
+
+
+
       </View>
     </div>
   );
