@@ -87,6 +87,7 @@ export default function HomeScreen() {
       />Another View
       <Text>Home Screen</Text>
       <Link href={{ pathname: 'details', params: { name: 'Bacon' } }}>Go to Details</Link>
+      <Link href='./details' >Details</Link>
     </View>
     </div>
   );
