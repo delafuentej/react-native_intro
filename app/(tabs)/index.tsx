@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View , Pressable, Image} from 'react-native';
+import { StyleSheet, Text, View , Pressable, Image, Button} from 'react-native';
 import {Link, Stack, useNavigation} from 'expo-router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const styles = StyleSheet.create({
   titleContainer: {
@@ -24,11 +24,19 @@ const styles = StyleSheet.create({
     height: 100,
     margin: 'auto',
   },
+  button: {
+    backgroundColor: 'orange',
+    borderWidth:10,
+    width:50,
+    height:50,
+  }
 
 
 });
 
 export default function HomeScreen() {
+  const[count, setCount]= useState(0);
+
   const navigation = useNavigation();
 
   useEffect(()=>{
@@ -81,10 +89,18 @@ export default function HomeScreen() {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
-
+          headerRight: ()=> <Button 
+                              onPress={()=> setCount(prev => prev +1)}
+                              title='Update count'
+                              />
          
         }}
-      />Another View
+      />Another View  <Text>Count: {count}</Text>
+       <Button 
+                              onPress={()=> setCount(prev => prev +1)}
+                              title='Update count'
+                              />
+         
       <Text>Home Screen</Text>
       <Link href={{ pathname: 'details', params: { name: 'Bacon' } }}>Go to Details</Link>
       <Link href='./details' >Details</Link>

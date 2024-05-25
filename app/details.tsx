@@ -9,9 +9,12 @@ const styles= StyleSheet.create({
     }
 })
 
+
+
 export default function Details(){
     const router = useRouter();
     const params= useLocalSearchParams();
+   
 
     return(
         <View style={styles.container}>
