@@ -20,7 +20,7 @@ export default function Details(){
         <View style={styles.container}>
             <Stack.Screen 
                 options={{
-                    title: params.name,
+                    // title: params.name,
                 }}/>
             <Text
                 onPress={() => {

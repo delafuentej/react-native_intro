@@ -2,6 +2,7 @@ import { StyleSheet, Text, View , Pressable, Image, Button} from 'react-native';
 import {Link, Stack, useNavigation} from 'expo-router';
 import { useEffect, useState } from 'react';
 
+
 const styles = StyleSheet.create({
   titleContainer: {
     textAlign:'center',
@@ -46,7 +47,9 @@ export default function HomeScreen() {
 
   
   return (
+    
     <div style={styles.titleContainer}>
+      
       <Image style={styles.image} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
       <Text >Home page</Text>
       <View style={{
@@ -77,11 +80,14 @@ export default function HomeScreen() {
         
         <Link  href='/logout'>Logout</Link>
 
+        <Link  href='/settings'>Settings</Link>
+
 
 
       </View>
       <View style={styles.container}>
       <Stack.Screen
+       
         options={{
           title: 'My home',
           headerStyle: { backgroundColor: '#f4511e' },
@@ -95,6 +101,7 @@ export default function HomeScreen() {
                               />
          
         }}
+        
       />Another View  <Text>Count: {count}</Text>
        <Button 
                               onPress={()=> setCount(prev => prev +1)}
@@ -102,6 +109,7 @@ export default function HomeScreen() {
                               />
          
       <Text>Home Screen</Text>
+      
       <Link href={{ pathname: 'details', params: { name: 'Bacon' } }}>Go to Details</Link>
       <Link href='./details' >Details</Link>
     </View>
