@@ -1,4 +1,5 @@
-import { Tabs } from 'expo-router';
+import { Tabs, Slot, Stack } from 'expo-router';
+
 import React from 'react';
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
@@ -44,7 +45,31 @@ export default function TabLayout() {
             
             }}
           />
+ 
+      <Slot />
+       <Tabs />
+       {/* <Stack.Screen> component in the routes's file. This is useful for interactions that change the UI. */}
+        <Stack />
+      {/* Native Layouts */}
 
+      {/* Native Layouts */}
+            <Stack 
+              screenOptions={{
+                headerStyle:{
+                  backgroundColor:'#f4511e',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle:{
+                  fontWeight:'bold',
+                },
+              }}>
+{/* Optionally configure static options outside the route.*/}
+              <Stack.Screen name="home" options={{}} />
+            </Stack>
     </Tabs>
+
+
+
+
   );
 }
