@@ -1,10 +1,28 @@
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View , Pressable} from 'react-native';
+import {Link} from 'expo-router';
 
 
 
 export default function HomeScreen() {
   return (
-    <Text style={styles.titleContainer}>Home page</Text>
+    <div style={styles.titleContainer}>
+      <Text >Home page</Text>
+      <View>
+        <Link href='/about'>
+            <Pressable>
+              <Text>About</Text>
+            </Pressable>
+        </Link>
+
+        <Link href='/user/bacon'>
+            <Pressable>
+              <Text>View User</Text>
+
+            </Pressable>
+        </Link>
+
+      </View>
+    </div>
   );
 }
 

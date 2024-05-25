@@ -30,8 +30,21 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
           ),
+        
         }}
       />
+
+    <Tabs.Screen
+            name="blog"
+            options={{
+              title: 'Blog',
+              tabBarIcon: ({ color, focused }) => (
+                <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+              ),
+            
+            }}
+          />
+
     </Tabs>
   );
 }
