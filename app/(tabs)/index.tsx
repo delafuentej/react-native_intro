@@ -14,7 +14,10 @@ export default function HomeScreen() {
             </Pressable>
         </Link>
 
-        <Link href='/user/bacon'>
+        <Link href={{
+          pathname: "user/[id]",
+          params:{id: 'bacon'}
+        }}>
             <Pressable>
               <Text>View User</Text>
 
