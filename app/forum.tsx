@@ -2,8 +2,13 @@ import { Text, FlatList, SectionList, StyleSheet, View } from "react-native";
 
 
 const styles= StyleSheet.create({
+  hauptContainer:{
+    flex:1,
+    flexDirection: "row",
+  },
   container:{
     flex: 1,
+    flexDirection:'column',
     paddingTop:20,
   },
     item:{
@@ -25,7 +30,7 @@ const styles= StyleSheet.create({
 
 export default function Forum() {
     return (
-      <>
+      <View style={styles.hauptContainer}>
         <View 
           style={styles.container}
         >
@@ -68,6 +73,6 @@ export default function Forum() {
 
 
 
-      </>
+      </View>
     );
   }
