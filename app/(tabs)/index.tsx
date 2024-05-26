@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , Pressable, Image, Button} from 'react-native';
+import { StyleSheet, Text, TextInput, View , Pressable, Image, Button} from 'react-native';
 import {Link, Stack, useNavigation} from 'expo-router';
 import { useEffect, useState } from 'react';
 
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
 
 export default function HomeScreen() {
   const[count, setCount]= useState(0);
+  const[name, setName]= useState('')
 
   const navigation = useNavigation();
 
@@ -113,6 +114,24 @@ export default function HomeScreen() {
       
       <Link href={{ pathname: 'details', params: { name: 'Bacon' } }}>Go to Details</Link>
       <Link href='./details' >Details</Link>
+    </View>
+    <View style={{
+      flex: 1,
+      alignContent: 'center', 
+      justifyContent: 'center', 
+      padding: 16,
+     
+    }}>
+      <Text 
+      
+      style={{ marginVertical: 16, margin:'auto' }}>
+        {name ? `Hi ${name}!` : 'What is your name?'}
+      </Text>
+      <TextInput
+        style={{ padding: 8, backgroundColor: 'skyblue', width:200, margin:'auto',  }}
+        onChangeText={text => setName(text)}
+        secureTextEntry={true}
+      />
     </View>
     </div>
   );
