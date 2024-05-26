@@ -1,4 +1,5 @@
 import { Text, Image, TextInput, View, ScrollView, StyleSheet } from "react-native";
+import { useState } from "react";
 
 const styles= StyleSheet.create({
   contentContainer: {
@@ -7,6 +8,8 @@ const styles= StyleSheet.create({
 });
 
 export default function Login() {
+  const[ userName, setUserName]= useState('');
+  const [password, setPassword]= useState('');
     return (
       <ScrollView style={styles.contentContainer}>
         <Text style={{textAlign: 'center'}}>Login</Text>
@@ -23,13 +26,17 @@ export default function Login() {
             />
         </View>
         <TextInput
+          
           style={{
             height:40,
             width:200,
             borderColor:'blue',
             borderWidth:3,
           }}
-          defaultValue="Type your username"
+         placeholder="Type your username"
+         onChangeText={username => setUserName(username)}
+         defaultValue={userName}
+         
         
         />
          <TextInput
@@ -39,7 +46,9 @@ export default function Login() {
             borderColor:'blue',
             borderWidth:3,
           }}
-          defaultValue="Type your password"
+          placeholder="Type your password"
+          onChangeText={pw=> setPassword(pw)}
+          defaultValue={password}
         
         />
         
