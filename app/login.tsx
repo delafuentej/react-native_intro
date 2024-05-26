@@ -36,6 +36,7 @@ export default function Login() {
          placeholder="Type your username"
          onChangeText={username => setUserName(username)}
          defaultValue={userName}
+         secureTextEntry={true}
          
         
         />
@@ -49,6 +50,7 @@ export default function Login() {
           placeholder="Type your password"
           onChangeText={pw=> setPassword(pw)}
           defaultValue={password}
+          secureTextEntry={true}
         
         />
         
