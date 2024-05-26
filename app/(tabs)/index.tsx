@@ -83,6 +83,8 @@ export default function HomeScreen() {
 
         <Link  href='/settings'>Settings</Link>
 
+      
+
 
 
       </View>
@@ -133,6 +135,8 @@ export default function HomeScreen() {
         secureTextEntry={true}
       />
     </View>
+
+    <Link  href='/custom'>Custom</Link>
     </div>
   );
 }
