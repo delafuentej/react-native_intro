@@ -106,6 +106,7 @@ export default function HomeScreen() {
        <Button 
                               onPress={()=> setCount(prev => prev +1)}
                               title='Update count'
+                              disabled={ count >=5}
                               />
          
       <Text>Home Screen</Text>
