@@ -3,6 +3,7 @@ import React from 'react';
 import { Box } from './box';
 
 export const Custom=(color:string)=>{
+   
     return(
         <View style={{flex:1, justifyContent:'center', alignContent:'center'}}>
             <Box color='red' />

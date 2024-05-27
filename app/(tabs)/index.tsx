@@ -30,10 +30,24 @@ const styles = StyleSheet.create({
     borderWidth:10,
     width:50,
     height:50,
-  }
+  }, 
+  box: {
+    width:75,
+    height:75,
+    backgroundColor:'purple',
+    margin: 'auto',
+    marginTop: 20
+
+
+  },
 
 
 });
+
+
+export const Box =(props:any)=>(
+  <View style={[styles.box, props.pressed && {backgroundColor:'red'}]} />
+);
 
 export default function HomeScreen() {
   const[count, setCount]= useState(0);
@@ -137,6 +151,12 @@ export default function HomeScreen() {
     </View>
 
     <Link  href='/custom'>Custom</Link>
+
+    <Pressable>
+      {(state) =><Box pressed={state.pressed}/>}
+
+    </Pressable>
+    
     </div>
   );
 }
